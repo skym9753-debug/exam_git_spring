@@ -19,5 +19,14 @@ public class MembersDAO {
 	public int login(MembersDTO dto) {
 		return mybatis.selectOne("Members.login",dto);
 	}
+	public MembersDTO getMember(String id) {
+		return mybatis.selectOne("Members.getMember",id);
+	}
+	public int deleteMember(String id) {
+		return mybatis.delete("Members.deleteMember",id);
+	}
+	public int updateMember(MembersDTO dto) {
+		return mybatis.update("Members.updateMember",dto);
+	}
     
 }

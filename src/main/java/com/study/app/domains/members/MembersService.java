@@ -16,7 +16,15 @@ public class MembersService {
     public int signup(MembersDTO dto) {
         return membersDAO.signup(dto);
     }
+    public MembersDTO getMember (String id) {
+    		return membersDAO.getMember(id);
+    }
 
-    
-    
+    public int deleteMember(String id) {
+        return membersDAO.deleteMember(id);
+    }
+
+    public int updateMember(MembersDTO dto) {
+        return membersDAO.updateMember(dto);
+    }
 }
