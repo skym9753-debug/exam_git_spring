@@ -22,7 +22,7 @@ public class BoardController {
     	
 		int totalCount = boardService.totalCount();
 		
-		System.out.println("페이지: " + cpage);
+		System.out.println("페이지:" + cpage + " 확인");
 		
 		Long startNum = cpage * 10-9;
 		Long endNum = cpage * 10;
