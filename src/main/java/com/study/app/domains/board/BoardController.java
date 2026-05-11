@@ -49,13 +49,13 @@ public class BoardController {
     	return ResponseEntity.ok(dto);
     }
 
-    @PostMapping
+    @PostMapping("/write")
     public ResponseEntity<Void> register(@RequestBody BoardDTO board) {
         boardService.registerBoard(board);
         return ResponseEntity.ok().build();
     }
 
-    @PutMapping("/{seq}")
+    @PutMapping("/edit/{seq}")
     public ResponseEntity<Void> modify(@PathVariable String seq, @RequestBody BoardDTO board) {
         board.setSeq(seq);
         boardService.modifyBoard(board);
